@@ -1,0 +1,14 @@
+RunTx()
+{
+#. /BATCH_JOB/def/SET_ENV.def
+$JAVA_HOME7/bin/java com.batchJob.common.ftp.impl.FtpsCheck
+}
+
+
+        
+
+echo '檢查相關FTP環境 start...'
+RunTx
+echo '檢查相關FTP環境 end...'
+
+

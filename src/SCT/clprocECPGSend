@@ -1,0 +1,17 @@
+RunTx()
+{
+#. /BATCH_JOB/def/SET_ENV.def
+$JAVA_HOME7/bin/java com.batchJob.common.queue.enqueue.cfg.CPGEnqueuePart3
+}
+
+
+        
+
+while true
+do
+  #傳送檔案
+  RunTx
+  
+  echo 'CPGEnqueuePart3 sleeping ......'
+  sleep 180
+done

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<do-config>
+	<do path="User/adduser" type="UserPackage.UserServlet">
+		<forward name="Success">AddSuccess.jsp</forward>
+	</do>
+	    
+    <application id="batchJob">
+
+        <property id="a" name="encoding" value="UTF-8"/>        
+        <property name="log-config" value="conf/logging.xml"/>
+        <property name="default-logger" value="apLogger"/>
+        <property name="xdao-config" value="conf/xdao.xml"/>
+        <property id="c" name="default-conn-id" value = "apFtzcConn"/>
+        
+        <settings>
+            <!-- CPG -->
+			<set name="CPG_DEQ_SYSCODE" value="FCM" />
+			<set name="CPG_DEQ_HUBTYPE" value="FCMS02" />
+			<set name="CPG_DEQ_ERR_DIR" value="/PFTZC/TMP/REVERR/CPG" />
+			<set name="CPG_DEQ_OK_DIR" value="/PFTZC/TMP/REVOK/CPG" />
+			<set name="CPG_DEQ_PENDING_DIR" value="/PFTZC/TMP/REVFIL/CPG" />
+			<set name="CPG_DEQ_PROCFLAG_FILE" value="/PFTZC/TMP/PROC_FLAG/clrecvFPG" />
+			<set name="CPG_DEQ_JMSUID" value="FCMS02" />
+			<set name="CPG_DEQ_JMSPW" value="FCMS02" />
+			<set name="CPG_SEND_PENDING_DIR" value="/PFTZC/TMP/SNDERR/CPG" />
+			<set name="CPG_SEND_OK_DIR" value="/PFTZC/TMP/SNDOK/CPG" />
+			<set name="CPG_SEND_ERR_DIR" value="/PFTZC/TMP/SNDFIL/CPG" />
+			<set name="CPG_SEND_FTP_PENDING_DIR" value="/PFTZC/TMP/SNDFIL/CPG/FTP" />
+			<set name="CPG_SEND_FTP_OK_DIR" value="/PFTZC/TMP/SNDOK/CPG/FTP" />
+			<set name="CPG_SEND_FTP_ERR_DIR" value="/PFTZC/TMP/SNDERR/CPG/FTP" />
+			<set name="ftpConfig.host" value="202.173.37.70" />
+			<set name="ftpConfig.userId" value="PostEventC" />
+			<set name="ftpConfig.pwd" value="postEC" />
+			<set name="ftpConfig.port" value="21" />
+			<set name="CPG_DEQ_QUEID" value="812" />
+			<set name="CPG_SEND_PATH" value="/L32DY01" />
+			<set name="CPG_ENQ_ERR_DIR" value="/PFTZC/TMP/REVERR/ECPG" />
+			<set name="CPG_ENQ_OK_DIR" value="/PFTZC/TMP/REVOK/ECPG" />
+			<set name="CPG_ENQ_PENDING_DIR" value="/PFTZC/TMP/REVFIL/ECPG" />
+			<set name="CPG_ENQ_SEND_ERR_DIR" value="/PFTZC/TMP/SNDERR/ECPG" />
+			<set name="CPG_ENQ_SEND_OK_DIR" value="/PFTZC/TMP/SNDOK/ECPG" />
+			<set name="CPG_ENQ_SEND_PENDING_DIR" value="/PFTZC/TMP/SNDFIL/ECPG" />
+            
+                           
+        </settings>
+        
+    </application>
+    
+</do-config>

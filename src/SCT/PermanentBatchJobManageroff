@@ -1,0 +1,21 @@
+#------------------------------------------------------------------#
+# NAME   : PermanentBatchJobManager常駐型背景作業管理程式                                                    #
+# AUTHOR :                                                         #
+# DATE   :                                                         #
+#------------------------------------------------------------------#
+
+
+
+
+RunTx()
+{
+#. /BATCH_JOB/def/SET_ENV.def
+$JAVA_HOME7/bin/java com.batchJob.common.BatchJobManager.PermanentBatchJobManager off
+}
+
+
+        
+
+
+  RunTx
+  echo 'PermanentBatchJobManager off ......'
